@@ -61,7 +61,8 @@ Code, DeepSeek Harness, Dify, n8n, and a general retrofit checklist.
 
 ## Repository
 
-- `pes_demo.py` — the demo above.
+- `pes_demo.py` — the demo above (prints the five ADRs, then runs the mechanism).
+- `decisions.py` — the five ADRs behind the pattern (paper §5.2) as data, with rejected alternatives.
 - `DISCUSSION.md` — tool-by-tool discussion.
 
 The reference implementation is not publicly released.
