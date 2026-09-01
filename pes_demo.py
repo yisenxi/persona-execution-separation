@@ -15,6 +15,8 @@ from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from enum import Enum
 
+from decisions import DECISIONS
+
 
 @dataclass
 class Persona:
@@ -126,6 +128,12 @@ def main() -> None:
     print("=" * 60)
     print("PES demo — Persona-Execution Separation (arXiv:2608.27427)")
     print("=" * 60)
+
+    print("\nThe five ADRs behind the pattern (paper §5.2):")
+    for adr in DECISIONS:
+        print(f"  {adr.id} [{adr.date}] {adr.decision}")
+        for r in adr.rejected:
+            print(f"      rejected: {r}")
 
     persona = Persona("employee-42", "Write the weekly report.", "professional")
     sop = SOP(
